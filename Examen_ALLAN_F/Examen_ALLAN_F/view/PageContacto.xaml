@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen_ALLAN_F.view.PageContacto">
+    <ContentPage.Content >
+        <StackLayout Margin="20,35,20,25" BackgroundColor="DarkBlue" >
+            <Label Text="Nombres"/>
+            <Entry Keyboard="Text"
+                   Placeholder="Nombres"
+                   x:Name="nombre"/>
+            <Label Text="Apellidos"/>
+            <Entry Keyboard="Text"
+                   Placeholder="Apellidos"
+                   x:Name="apellido"/>
+            <Label Text="Edad"/>
+            <Entry Keyboard="Numeric"
+                   Placeholder="Edad"
+                   x:Name="edad"/>
+            <Label Text="Latitud"/>
+            <Entry Keyboard="Numeric"
+                   Placeholder="Latitud"
+                   x:Name="latitud"/>
+            <Label Text="Longitud"/>
+            <Entry Keyboard="Numeric"
+                   Placeholder="Longitud"
+                   x:Name="longitud"/>
+          
+            <Picker Title="Selecione un Pais" x:Name="pais"
+        TitleColor="Red">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Honduras(+504)</x:String>
+                        <x:String>Costarica(+506)</x:String>
+                        <x:String>Guatemala(+502)</x:String>
+                        <x:String>Salvador(503)</x:String>
+                        
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Label Text="Nota"/>
+            <Entry Keyboard="Text"  
+                   Placeholder="Nota"
+                   x:Name="nota"/>
+            <Button Text="Agrgar Contacto"
+                    BackgroundColor="Beige" TextColor="Black"
+                    Font="Large"
+                    BorderWidth="1"
+                    x:Name="Btnagregar"
+                    Clicked="Btnagregar_Clicked_1"/>
+            <Button Text="Eliminar" x:Name="Btneliminar" IsEnabled="True" Clicked="Btneliminar_Clicked"/>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
