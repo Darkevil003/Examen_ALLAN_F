@@ -1,58 +1,89 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Examen_ALLAN_F.view.PageContacto">
+             x:Class="Examen_ALLAN_F.view.PageContacto"
+             >
+   
+
     <ContentPage.Content >
-        <StackLayout Margin="20,35,20,25" 
-                     
-                     BackgroundColor="DarkBlue" >
-            <Label Text="Nombres"/>
+        <ScrollView>
+            <StackLayout Margin="20,20,20,25" 
+                    Orientation="Vertical"
+                    
+                     BackgroundColor="Beige" >
+            <Image Source="UCENM" HeightRequest="60"/>
+            <Label Text="Nombres" TextColor="Black"/>
             <Entry Keyboard="Text"
+                   
+                   TextColor="Black"
+                   PlaceholderColor="Black"
                    Placeholder="Nombres"
                    x:Name="nombre"/>
-            <Label Text="Apellidos"/>
+            <Label Text="Apellidos" TextColor="Black"/>
             <Entry Keyboard="Text"
+                  PlaceholderColor="Black"
+                   
+                   TextColor="Black"
                    Placeholder="Apellidos"
                    x:Name="apellido"/>
-            <Label Text="Edad"/>
+            <Label Text="Edad" TextColor="Black"
+                   />
             <Entry Keyboard="Numeric"
+                   TextColor="Black"
+                   PlaceholderColor="Black"
                    Placeholder="Edad"
                    x:Name="edad"/>
-            <Label Text="Latitud"/>
+            <Label Text="Latitud" TextColor="Black"/>
             <Entry Keyboard="Numeric"
+                   TextColor="Black"
+                   PlaceholderColor="Black"
                    Placeholder="Latitud"
                    x:Name="latitud"/>
-            <Label Text="Longitud"/>
+            <Label Text="Longitud" TextColor="Black"/>
             <Entry Keyboard="Numeric"
+                   TextColor="Black"
+                   PlaceholderColor="Black"
                    Placeholder="Longitud"
                    x:Name="longitud"/>
-          
-            <Picker Title="Selecione un Pais" x:Name="pais"
-        TitleColor="Red">
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Honduras(+504)</x:String>
+
+                <Picker Title="Selecione un Pais" x:Name="pais"
+        TitleColor="Black" TextColor="Black">
+                    <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}" >
+                        <x:String>Honduras(+504)</x:String >
                         <x:String>Costarica(+506)</x:String>
                         <x:String>Guatemala(+502)</x:String>
                         <x:String>Salvador(503)</x:String>
-                        
+
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>
+            <Entry Keyboard="Numeric"
+                   Placeholder="Telefono"
+                   TextColor="Black"
+                   PlaceholderColor="Black"
+                   x:Name="telefono"/>
             <Label Text="Nota"/>
-            <Entry Keyboard="Text"  
+            <Entry Keyboard="Text" 
+                   
+                   TextColor="Black"
+                   PlaceholderColor="Black"
                    Placeholder="Nota"
                    x:Name="nota"/>
             <Button Text="Agrgar Contacto"
-                    BackgroundColor="Beige" TextColor="Black"
+                    BackgroundColor="Brown" TextColor="Black"
                     Font="Large"
+                    HeightRequest="60"
+                    WidthRequest="60"
+                    Margin="20,5,20,0"
                     BorderWidth="1"
                     x:Name="Btnagregar"
                     Clicked="Btnagregar_Clicked_1"/>
-           
 
 
 
-        </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

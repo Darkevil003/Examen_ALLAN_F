@@ -31,6 +31,7 @@ namespace Examen_ALLAN_F.view
             latitud.Text = contacto.Latitud.ToString();
             longitud.Text = contacto.Longitud.ToString();
             pais.SelectedItem = contacto.Pais;
+            telefono.Text = contacto.Telefono.ToString();
             nota.Text = contacto.Nota;
 
 
@@ -82,7 +83,8 @@ namespace Examen_ALLAN_F.view
 
             if (string.IsNullOrWhiteSpace(nombre.Text) || string.IsNullOrWhiteSpace(apellido.Text) ||
 
-                string.IsNullOrWhiteSpace(edad.Text)) 
+                string.IsNullOrWhiteSpace(edad.Text)|| string.IsNullOrWhiteSpace(telefono.Text) ||
+                string.IsNullOrWhiteSpace(nota.Text) || string.IsNullOrWhiteSpace(pais.SelectedItem.ToString()))
             {
                 await DisplayAlert("Alerta", "CAMPO EN BLANCO RELLENE TODOS LOS CAMPOS REQUERIDOS", "OK");
 
@@ -97,6 +99,7 @@ namespace Examen_ALLAN_F.view
                 _contacto.Latitud = Convert.ToDouble(latitud.Text);
                 _contacto.Longitud = Convert.ToDouble(longitud.Text);
                 _contacto.Pais = pais.SelectedItem.ToString();
+                _contacto.Telefono = Convert.ToDouble(telefono.Text.ToString());
                 _contacto.Nota = nota.Text;
 
 
@@ -118,6 +121,7 @@ namespace Examen_ALLAN_F.view
                     Longitud = Convert.ToDouble(longitud.Text),
 
                     Pais = pais.SelectedItem.ToString(),
+                    Telefono= Convert.ToDouble(telefono.Text),
                     Nota = nota.Text
 
 

@@ -14,6 +14,7 @@ namespace Examen_ALLAN_F.Model
         [MaxLength(70)]
         public string Apellido { get; set; } 
         public int Edad { get; set; }
+        public double Telefono { get; set; }
         public string Pais { get; set; }
         public string Nota { get; set; }
         public double Longitud { get; set; }

@@ -12,7 +12,7 @@
                
         
     </ContentPage.ToolbarItems>
-    <ContentPage.Content>
+    <ContentPage.Content >
         <StackLayout>
             
             <CollectionView x:Name="ListaContactos"
@@ -49,29 +49,33 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <StackLayout>
-                                <Label  Text="{Binding Id}"
+                            <StackLayout Padding="5"
+                                       BackgroundColor="White"
+                                         >
+                                <Label TextColor="Black" Text="{Binding Id}"
                                     
                                        
                                />
-                                <Label Text="{Binding Nombre}"
+                                 <Label TextColor="Black"  Text="{Binding Nombre}"
                                     />
-                                <Label Text="{Binding Apellido}"
+                                 <Label TextColor="Black"  Text="{Binding Apellido}"
                                    />
 
-                                <Label Text="{Binding Edad}"
+                                 <Label TextColor="Black"  Text="{Binding Edad}"
                                    />
-                                <Label Text="{Binding Latitud}"
+                                   <Label TextColor="Black" Text="{Binding Latitud}"
                                    />
-                                <Label Text="{Binding Longitud}"
+                                 <Label TextColor="Black"  Text="{Binding Longitud}"
                                    />
 
-                                    <Label Text="{Binding Pais}"
+                                    <Label TextColor="Black"  Text="{Binding Pais}"
                                 />
-                               
+                                    <Label TextColor="Black" Text="{Binding Telefono}"/>
+                                
+                                    <Label TextColor="Black" Text="{Binding Nota} "/>
 
 
-                            </StackLayout>
+                                </StackLayout>
                             </Grid>
                         </SwipeView>
                     </DataTemplate>
