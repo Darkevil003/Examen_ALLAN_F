@@ -8,10 +8,7 @@
           
                      x:Name="nuevo"
                      Clicked="nuevo_Clicked"/>
-        <ToolbarItem Text="Eliminar"
-          
-                     x:Name="Eliminar"
-                     Clicked="Eliminar_Clicked"/>
+        
                
         
     </ContentPage.ToolbarItems>
@@ -19,26 +16,64 @@
         <StackLayout>
             
             <CollectionView x:Name="ListaContactos"
-                           Margin="20"
+                           Margin="20,5,20,0"
                            SelectionMode="Single"
                             SelectionChanged="ListaContactos_SelectionChanged">
 
                 <CollectionView.ItemsLayout>
-                    <LinearItemsLayout Orientation="Vertical"
+                    <LinearItemsLayout 
+                        Orientation="Vertical"
                                        ItemSpacing="10"/>
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout>
-                            <Label  Text="{Binding Id}"/>
-                            <Label Text="{Binding Nombre}" />
-                            <Label Text="{Binding Apellido}"/>
-                           
-                            <Label Text="{Binding Edad}"/>
-                            <Label Text="{Binding Pais}"/>
-                            
+                        <SwipeView>
+                            <SwipeView.RightItems>
+                                <SwipeItems>
+                                    <SwipeItem Text="Editar"
+                                               BackgroundColor="AliceBlue"
+                                               x:Name="editar"
+                                               CommandParameter="{Binding .}"
+                                               Clicked="editar_Clicked"/>
+                                    <SwipeItem Text="Eliminar"
+                                               BackgroundColor="Red"
+                                               x:Name="eli"
+                                               CommandParameter="{Binding .}"
+                                               Clicked="eli_Clicked"/>
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+                            <Grid RowSpacing="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout>
+                                <Label  Text="{Binding Id}"
+                                    
+                                       
+                               />
+                                <Label Text="{Binding Nombre}"
+                                    />
+                                <Label Text="{Binding Apellido}"
+                                   />
 
-                        </StackLayout>
+                                <Label Text="{Binding Edad}"
+                                   />
+                                <Label Text="{Binding Latitud}"
+                                   />
+                                <Label Text="{Binding Longitud}"
+                                   />
+
+                                    <Label Text="{Binding Pais}"
+                                />
+                               
+
+
+                            </StackLayout>
+                            </Grid>
+                        </SwipeView>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>

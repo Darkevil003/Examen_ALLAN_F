@@ -13,6 +13,7 @@ namespace Examen_ALLAN_F
         {
             InitializeComponent();
             DB.conexion(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "EXAMEN.db3"));
+            
 
             MainPage = new NavigationPage(new view.PagePrincipal());
         }

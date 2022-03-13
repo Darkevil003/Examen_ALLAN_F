@@ -16,14 +16,17 @@ namespace Examen_ALLAN_F.Controller
 
         public static Task<int> addregistrer(Contacto contacto)
         {
-            if (contacto.Id != 0)
-            {
-                return DB.dbconexion.UpdateAsync(contacto);
-            }
-            else
-            {
+           
+            
                 return DB.dbconexion.InsertAsync(contacto);
-            }
+            
+        }
+        public static Task<int> Actualizar(Contacto contacto)
+        {
+
+
+            return DB.dbconexion.UpdateAsync(contacto);
+
         }
         public static Task<Contacto> Obteneregistrer(int cid)
         {
